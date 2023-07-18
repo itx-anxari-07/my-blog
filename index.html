@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('nature')"> PROGRAMMING</button>
+            <button class="btn" onclick="filterSelection('cars')"> ANIME</button>
+            <button class="btn" onclick="filterSelection('people')"> GAMING</button>
+        </div>
+
+        <!-- Portfolio Gallery Grid -->
+        <div class="row">
+            <div class="column nature">
+                <div class="content">
+                    <img src="blog 6.avif" alt="Mountains" style="width:100%;height:200px;">
+                    <h1>the world of <em>CODING</em></h1>
+                    <h4> today's technology-driven world, programming has become an invaluable skill that empowers
+                        individuals to shape the
+                        digital landscape and bring their ideas to life. From web development to artificial
+                        intelligence,
+                        programming forms the backbone of modern innovation.</h4>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+                    <img src="blog 4.jpeg" alt="Lights" style="width:100%;height:200px;">
+                    <h1> Opportunities</h1>
+                    <h4>Programming offers a wide range of career opportunities across various industries. From software
+                        development and cybersecurity to data science and artificial intelligence, programming skills
+                        are in high demand.The versatility of programming allows individuals to explore different paths
+                        . </h4>
+                </div>
+            </div>
+            <div class="column nature">
+                <div class="content">
+                    <img src="bllog 5.jpg" alt="Nature" style="width:100%;height:200px;">
+                    <h1>Efficiency</h1>
+                    <h4>One of the remarkable aspects of programming is its ability to automate repetitive tasks and
+                        streamline processes. From
+                        scripting routine operations to creating complex workflows, programming allows for increased
+                        efficiency and
+                        productivity. By automating mundane tasks, programmers can focus on more strategic and creative
+                        endeavors, leading to
+                        enhanced productivity .</h4>
+                </div>
+            </div>
+
+            <div class="column cars">
+                <div class="content">
+                    <img src="goku_anime_boy_dark_art.jpg" alt="Car" style="width:100%;height:200px;">
+                    <h1>Japanese Animation</h1>
+                    <h4>
+                        Anime, the vibrant and captivating style of Japanese animation, has become a global phenomenon
+                        that
+                        has captured the
+                        hearts of millions around the world. With its unique artistry, compelling storytelling, and
+                        diverse cultural boundaries, attracting a dedicated fanbase spanning across generations.
+                    </h4>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+                    <img src="blog 7.jpeg" alt="Car" style="width:100%;height:200px;">
+                    <h1>Engaging Narratives:</h1>
+                    <h4>One of the captivating aspects of anime is its wide range of genres, catering to various tastes
+                        and interests. From
+                        action-packed shonen series like "Dragon Ball" and "Naruto" to emotionally-driven dramas like
+                        "Your Lie in April" and
+                        "Clannad," anime offers something for everyone.</h4>
+                </div>
+            </div>
+            <div class="column cars">
+                <div class="content">
+                    <img src="madara-uchiha-sharingan.jpg" alt="Car" style="width:100%;height:200px;">
+                    <h1>Inspiration:</h1>
+                    <h4>Anime possesses a unique ability to provoke thought, challenge societal norms, and inspire
+                        personal growth. Themes of
+                        friendship, love, heroism, and self-discovery resonate deeply with viewers, encouraging
+                        introspection and fostering
+                        empathy., leaving a lasting impact on the audience and prompting discussions . Many anime series
+                        tackle complex moral dilemmason profound
+                        subjects.</h4>
+                </div>
+            </div>
+
+            <div class="column people">
+                <div class="content">
+                    <img src="blog pic 1.webp" alt="Car" style="width:100%;height:200px;">
+                    <h1>GAMING</h1>
+                    <h4>its humble beginnings. What started as simple pixelated graphics and basic gameplay has
+                        transformed into a multi-billion dollar industry, captivating millions of people worldwide. From
+                        nostalgic classics to
+                        cutting-edge virtual reality experiences, gaming has evolved into an art form that offers
+                        immersive storytelling,
+                        breathtaking visuals, and a limitless realm of interactive entertainment.</h4>
+                </div>
+            </div>
+            <div class="column people">
+                <div class="content">
+                    <img src="blog pic 2.jpg" alt="Car" style="width:100%;height:200px;">
+                    <h1>Technology </h1>
+                    <h4>The 1990s marked a significant turning point with the introduction of 3D graphics and CD-ROMs.
+                        This technological leap
+                        allowed developers to create more immersive and visually stunning worlds. Games like Doom, Final
+                        Fantasy VII, and Tomb
+                        Raider pushed the boundaries of what was thought possible, captivating players with their rich
+                        narratives and impressive
+                        visuals.</h4>
+                </div>
+            </div>
+            <div class="column people">
+                <div class="content">
+                    <img src="garena-free-fire-game-4k-new-km.jpg" alt="Car" style="width:100%;height:200px;">
+                    <h1>experience</h1>
+                    <h4>the rise of the internet in the late 1990s, gaming took another giant leap forward. Online
+                        multiplayer gaming
+                        became a reality, connecting players from different corners of the globe. Games like World of
+                        Warcraft and
+                        Counter-Strike revolutionized the multiplayer experience, fostering communities and competitive
+                        gaming at an
+                        unprecedented scale</h4>
+                </div>
+            </div>
+            <!-- END GRID -->
+        </div>
+
+        <!-- END MAIN -->
+    </div>
+
+    <script>
+        filterSelection("all")
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("column");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+</body>
+
+</html>
